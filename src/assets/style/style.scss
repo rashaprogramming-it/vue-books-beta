@@ -1,0 +1,90 @@
+@import url(nullstyle.scss);
+@import url(search-style.css);
+
+body {
+    background: #151515;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.list {
+    margin-top: 30px;
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.book {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: linear-gradient(#333, #222);
+    border-radius: 0 40px 40px 0;
+
+    &-img {
+        height: 140px;
+        width: 100px;
+        object-fit: cover;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        color: #fff;
+
+        &-title {
+            text-transform: uppercase;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        &-text {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        &-author {
+            font-weight: 500;
+            font-style: italic;
+            font-size: 12px;
+        }
+
+        &-btn {
+            padding: 5px 10px;
+            background: grey;
+            color: #fff;
+            width: max-content;
+            border-radius: 20px;
+            font-size: 14px;
+            transition: all .5s;
+
+            &:hover {
+                opacity: 50%;
+            }
+        }
+    }
+}
+
+@media(max-width: 800px) {
+    .books-workshop:before,
+    .books-workshop:after {
+        display: none;
+    }
+}
+
+@media(max-width: 700px) {
+    .book {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+
+        &__info {
+            align-items: center;
+        }
+    }
+}
